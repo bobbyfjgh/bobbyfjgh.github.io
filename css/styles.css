@@ -1,251 +1,343 @@
-/* -- styles.css (Version avec images 50% de la largeur) -- */
-
-:root {
-    --color-primary: #0077b6;     
-    --color-secondary: #03045e;   
-    --color-text: #333333;
-    --color-light-bg: #f5faff;    
-    --color-card-bg: #ffffff;
-    --color-border: #bbd0ff;
-    --font-heading: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    --font-body: 'Arial', sans-serif;
-}
-
-/* ---------------------------------------------------- */
-/* 1. TYPOGRAPHIE ET FOND GÉNÉRAL */
-/* ---------------------------------------------------- */
+/* ================================================================= */
+/* GLOBAL STYLES & LAYOUT */
+/* ================================================================= */
 
 body {
-    font-family: var(--font-body);
-    line-height: 1.6;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: var(--color-light-bg);
-    color: var(--color-text);
-    /* Exemple d'image de fond globale (à décommenter et modifier) */
-    /* background-image: url('img/background.jpg'); */ 
-    /* background-size: cover; */
-    /* background-attachment: fixed; */
-    /* background-position: center center; */
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
 }
-
-h1, h2, h3 {
-    font-family: var(--font-heading);
-    color: var(--color-secondary);
-}
-
-h2 {
-    border-bottom: 2px solid var(--color-primary);
-    padding-bottom: 10px;
-    margin-top: 0;
-    font-size: 1.8em;
-}
-
-/* ---------------------------------------------------- */
-/* 2. HEADER ET NAVIGATION */
-/* ---------------------------------------------------- */
-
-header {
-    background: var(--color-secondary); 
-    color: #ffffff;
-    padding: 1.5em 0;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.15);
-}
-header h1 {
-    margin: 0 0 10px 0;
-    font-size: 2.5em;
-    color: white;
-}
-nav a {
-    color: #c0d8f0;
-    text-decoration: none;
-    margin: 0 18px;
-    font-weight: 600;
-    transition: color 0.3s, border-bottom 0.3s;
-    padding-bottom: 5px;
-}
-nav a:hover {
-    color: white;
-    border-bottom: 2px solid var(--color-primary);
-}
-
-/* ---------------------------------------------------- */
-/* 3. CONTENU PRINCIPAL ET SECTIONS */
-/* ---------------------------------------------------- */
 
 main {
-    padding: 20px;
     max-width: 1200px;
-    margin: 30px auto 80px auto; 
-    background: var(--color-card-bg);
-    border-radius: 12px;
-    box-shadow: 0 0 25px rgba(0,0,0,0.1);
+    margin: 20px auto;
+    padding: 0 20px;
 }
 
 section {
-    padding: 30px 20px;
-    margin-bottom: 30px;
-}
-
-main section:not(#welcome) {
-    display: none;
-}
-
-/* ---------------------------------------------------- */
-/* 4. CARTES DE PROJET (Dynamique) */
-/* ---------------------------------------------------- */
-
-.project-card {
-    border: 1px solid var(--color-border);
-    padding: 25px;
-    margin-bottom: 20px;
+    background-color: #ffffff;
+    padding: 30px;
+    margin-bottom: 25px;
     border-radius: 8px;
-    background-color: var(--color-card-bg);
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-}
-.project-card h3 {
-    color: var(--color-primary);
-    margin-top: 0;
-    font-size: 1.5em;
-}
-.project-card .tech {
-    font-style: italic;
-    font-size: 0.9em;
-    color: #555;
-    margin-top: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
-/* ---------------------------------------------------- */
-/* 5. BOUTONS ET LIENS */
-/* ---------------------------------------------------- */
+h1 {
+    font-size: 2.5em;
+    margin: 0;
+    padding-bottom: 10px;
+}
 
-.btn {
-    display: inline-block;
-    background-color: var(--color-primary);
-    color: white;
-    padding: 10px 20px;
+h2 {
+    color: #0056b3; /* Bleu primaire */
+    border-bottom: 3px solid #0056b3;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+}
+
+h3 {
+    color: #444;
+    margin-top: 20px;
+    border-left: 5px solid #0056b3;
+    padding-left: 10px;
+}
+
+p, ul {
+    margin-bottom: 15px;
+}
+
+strong {
+    font-weight: 700;
+    color: #004080;
+}
+
+/* ================================================================= */
+/* HEADER & NAVIGATION STYLING (Bannière Blanche & Boutons) */
+/* ================================================================= */
+
+header {
+    /* Fond Blanc demandé */
+    background-color: #ffffff; 
+    background-image: none;
+    
+    color: #333;
+    
+    padding: 20px 0;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Supprime le filtre sombre */
+header::before {
+    content: none;
+}
+
+header h1 {
+    color: #0056b3; /* Titre principal en bleu */
+    position: relative;
+    z-index: 1;
+}
+
+header nav {
+    margin-top: 15px;
+    display: flex; /* Active Flexbox */
+    justify-content: center; /* Centre les liens */
+    flex-wrap: nowrap; /* EMPÊCHE LE RETOUR À LA LIGNE sur desktop */
+    overflow-x: auto; /* Permet un défilement horizontal si l'écran est trop petit */
+    padding: 0 10px;
+}
+
+/* Liens de navigation (Boutons sans cadre) */
+header nav a {
+    background-color: white; 
+    color: #333; /* Texte noir/gris foncé */
+    
+    padding: 8px 15px;
+    margin: 0 5px;
     text-decoration: none;
     border-radius: 5px;
-    margin-right: 10px;
-    margin-top: 15px;
-    transition: background-color 0.3s, transform 0.1s;
-}
-.btn:hover {
-    background-color: #005f96;
-    transform: translateY(-1px);
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+    
+    /* SUPPRESSION DE LA BORDURE */
+    border: none; 
+    
+    /* MODIFICATION DE LA TAILLE DE LA POLICE */
+    font-size: 0.9em; 
+    
+    /* Important pour Flexbox */
+    display: inline-block; 
+    flex-shrink: 0; /* Empêche les liens d'être réduits */
 }
 
-/* ---------------------------------------------------- */
-/* 6. SOUS-ONGLETS (TABS) */
-/* ---------------------------------------------------- */
+header nav a:hover {
+    background-color: #e9e9e9; 
+    color: #0056b3; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+
+/* ================================================================= */
+/* WELCOME SECTION STYLING (Photo à gauche) */
+/* ================================================================= */
+
+.welcome-content {
+    display: flex; 
+    align-items: flex-start;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.profile-photo {
+    /* CONTRAINTE DE TAILLE POUR LA PHOTO DE PROFIL */
+    width: 180px; 
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%; /* Image ronde */
+    flex-shrink: 0; 
+    border: 4px solid #0056b3; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.welcome-text {
+    flex-grow: 1; 
+}
+
+
+/* ================================================================= */
+/* TABS STYLING (Navigation par onglets) */
+/* ================================================================= */
 
 .tabs-nav {
     display: flex;
-    margin-bottom: 25px;
-    border-bottom: 2px solid var(--color-border);
-    overflow-x: auto;
+    border-bottom: 2px solid #ddd;
+    margin-bottom: 20px;
+    overflow-x: auto; 
 }
-.tabs-nav .tab-link {
+
+.tabs-nav a {
     padding: 10px 15px;
     text-decoration: none;
-    color: var(--color-text);
-    font-weight: 500;
-    transition: color 0.3s, border-bottom 0.3s;
-    border-bottom: 2px solid transparent;
-    margin-right: 15px;
-    white-space: nowrap;
+    color: #555;
+    border: none;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s ease;
+    white-space: nowrap; 
 }
-.tabs-nav .tab-link.active {
-    color: var(--color-primary);
-    border-bottom: 2px solid var(--color-primary);
-    font-weight: 600;
+
+.tabs-nav a:hover {
+    color: #0056b3;
+    border-bottom: 3px solid #ccc;
 }
-.tabs-nav .tab-link:hover:not(.active) {
-    color: var(--color-primary);
+
+.tabs-nav a.active {
+    color: #0056b3;
+    border-bottom: 3px solid #0056b3;
+    font-weight: bold;
 }
 
 .tab-content {
-    padding: 20px 0 0 0;
-    border-top: 1px solid #eee;
-    display: none; 
+    display: none;
+    padding: 10px 0;
 }
+
 .tab-content.active {
     display: block;
 }
 
-/* ---------------------------------------------------- */
-/* 7. FOOTER */
-/* ---------------------------------------------------- */
+/* ================================================================= */
+/* PROJECT & ENGAGEMENT STYLING (Incluant le Zig-Zag) */
+/* ================================================================= */
 
-footer {
-    background: var(--color-secondary);
-    color: #c0d8f0;
-    text-align: center;
-    padding: 15px 0;
-    width: 100%;
+.project-summary-list {
+    margin-left: 20px;
 }
 
-/* ---------------------------------------------------- */
-/* 8. STYLES SPÉCIFIQUES À LA SECTION ENGAGEMENT (50% IMAGES) */
-/* ---------------------------------------------------- */
+.project-summary-list h4 {
+    color: #0056b3;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-size: 1.1em;
+}
 
+.project-separator {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 86, 179, 0.5), rgba(0, 0, 0, 0));
+    margin: 30px 0;
+}
+
+/* Engagement Items (Civic/Sustainability) */
 .engagement-item {
-    display: flex; /* Utilise Flexbox */
-    gap: 20px; /* Espace entre l'image et le contenu */
-    margin-bottom: 40px;
-    padding: 0; /* Pas de padding sur l'item parent pour laisser l'image s'étendre */
-    border: 1px solid var(--color-border);
-    border-radius: 8px;
-    background-color: var(--color-card-bg);
-    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-    overflow: hidden; /* Empêche l'image de dépasser les bords arrondis */
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 1px solid #eee;
+    border-radius: 6px;
+    background-color: #fcfcfc;
 }
 
-/* Contenu textuel (texte + listes) - occupe l'autre moitié */
+.engagement-item:nth-child(even) {
+    flex-direction: row-reverse; /* CRÉE L'EFFET ZIG-ZAG (image à droite) */
+}
+
 .engagement-content {
-    flex: 1; /* Prend l'espace restant */
-    padding: 25px;
-}
-.engagement-content h3 {
-    margin-top: 0;
+    flex-grow: 1;
+    padding: 0 20px;
 }
 
-/* Image - occupe la moitié de l'espace total */
 .engagement-image {
-    width: 50%; /* L'image prend 50% de la largeur du conteneur */
-    height: auto; /* Hauteur ajustée automatiquement */
-    min-height: 250px; /* Assure une hauteur minimale pour les grands écrans */
-    object-fit: cover; /* Assure que l'image couvre l'espace sans déformation */
-    opacity: 0.6; /* Transparence initiale (60%) */
-    transition: opacity 0.3s ease-in-out; /* Animation de transparence */
+    /* AUCUNE CONTRAINTE DE TAILLE POUR LES IMAGES D'ENGAGEMENT (taille naturelle) */
+    object-fit: cover;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Inverser l'ordre pour l'item de la Réserve Militaire */
-/* J'ai modifié le HTML pour mettre le texte avant l'image, 
-   donc nous allons inverser l'ordre des éléments (texte à droite, image à gauche) */
-.engagement-item:nth-child(2) { 
-    flex-direction: row-reverse; 
+/* Style pour les cartes de projets qui seront injectées par JS */
+.project-card {
+    border: 1px solid #ddd;
+    border-left: 5px solid #0056b3;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.project-card h4 {
+    color: #0056b3;
+    margin-top: 0;
+    font-size: 1.2em;
+}
+
+.project-card .technologies {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.project-card .links a {
+    display: inline-block;
+    background-color: #f4f4f4;
+    color: #0056b3;
+    padding: 5px 10px;
+    margin-right: 10px;
+    border-radius: 3px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.2s;
+}
+
+.project-card .links a:hover {
+    background-color: #e0e0e0;
 }
 
 
-.engagement-item:hover .engagement-image {
-    opacity: 1; /* Transparence à 100% au survol */
+/* ================================================================= */
+/* FOOTER */
+/* ================================================================= */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+    margin-top: 40px;
+    border-top: 4px solid #0056b3;
 }
 
-/* Ajustement pour les petits écrans (empilement) */
-@media (max-width: 900px) { /* Augmentation du breakpoint pour l'empilement */
-    .engagement-item {
-        flex-direction: column; /* Empile l'image et le texte */
+
+/* ================================================================= */
+/* MEDIA QUERIES (Responsive Design) */
+/* ================================================================= */
+
+@media (max-width: 768px) {
+    main {
+        padding: 0 10px;
     }
+
+    /* WELCOME : Empile la photo au-dessus du texte */
+    .welcome-content {
+        flex-direction: column; 
+        align-items: center; 
+        text-align: center;
+    }
+    
+    .welcome-content .welcome-text {
+        padding: 0; 
+    }
+
+    /* HEADER : Empile les liens de navigation (Comportement Mobile Standard) */
+    header nav {
+        flex-direction: column; /* Les liens s'empilent verticalement */
+        gap: 8px;
+        padding: 0 10px;
+        flex-wrap: wrap; 
+    }
+    
+    header nav a {
+        margin: 0;
+    }
+    
+    /* ENGAGEMENT : Inverse l'ordre des éléments pour qu'ils s'empilent */
+    .engagement-item, 
+    .engagement-item:nth-child(even) {
+        flex-direction: column;
+        text-align: center;
+    }
+    
     .engagement-image {
-        width: 100%; /* L'image prend 100% de la largeur */
-        height: 250px; /* Hauteur fixe pour éviter une trop grande image */
+        margin-top: 15px;
+        margin-bottom: 10px;
     }
-    .engagement-item:nth-child(2) { 
-        flex-direction: column; /* Réinitialise l'inversion */
-    }
+    
     .engagement-content {
-        padding: 20px;
+        padding: 0;
     }
-}	
+}
