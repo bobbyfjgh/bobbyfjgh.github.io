@@ -1,104 +1,251 @@
-/* -- styles.css -- */
+/* -- styles.css (Version avec images 50% de la largeur) -- */
+
+:root {
+    --color-primary: #0077b6;     
+    --color-secondary: #03045e;   
+    --color-text: #333333;
+    --color-light-bg: #f5faff;    
+    --color-card-bg: #ffffff;
+    --color-border: #bbd0ff;
+    --font-heading: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --font-body: 'Arial', sans-serif;
+}
+
+/* ---------------------------------------------------- */
+/* 1. TYPOGRAPHIE ET FOND GÉNÉRAL */
+/* ---------------------------------------------------- */
+
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--font-body);
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f8f8f8;
-    color: #333;
+    background-color: var(--color-light-bg);
+    color: var(--color-text);
+    /* Exemple d'image de fond globale (à décommenter et modifier) */
+    /* background-image: url('img/background.jpg'); */ 
+    /* background-size: cover; */
+    /* background-attachment: fixed; */
+    /* background-position: center center; */
 }
+
+h1, h2, h3 {
+    font-family: var(--font-heading);
+    color: var(--color-secondary);
+}
+
+h2 {
+    border-bottom: 2px solid var(--color-primary);
+    padding-bottom: 10px;
+    margin-top: 0;
+    font-size: 1.8em;
+}
+
+/* ---------------------------------------------------- */
+/* 2. HEADER ET NAVIGATION */
+/* ---------------------------------------------------- */
+
 header {
-    background: #1e3a8a; /* Bleu foncé */
+    background: var(--color-secondary); 
     color: #ffffff;
-    padding: 1em 0;
+    padding: 1.5em 0;
     text-align: center;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.15);
 }
 header h1 {
-    margin: 0;
-    font-size: 2em;
+    margin: 0 0 10px 0;
+    font-size: 2.5em;
+    color: white;
 }
 nav a {
-    color: #e0e7ff;
+    color: #c0d8f0;
     text-decoration: none;
-    margin: 0 15px;
+    margin: 0 18px;
     font-weight: 600;
-    transition: color 0.3s;
+    transition: color 0.3s, border-bottom 0.3s;
+    padding-bottom: 5px;
 }
 nav a:hover {
-    color: #ffffff;
+    color: white;
+    border-bottom: 2px solid var(--color-primary);
 }
+
+/* ---------------------------------------------------- */
+/* 3. CONTENU PRINCIPAL ET SECTIONS */
+/* ---------------------------------------------------- */
+
 main {
     padding: 20px;
     max-width: 1200px;
-    margin: 20px auto;
-    background: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+    margin: 30px auto 80px auto; 
+    background: var(--color-card-bg);
+    border-radius: 12px;
+    box-shadow: 0 0 25px rgba(0,0,0,0.1);
 }
+
 section {
-    padding: 30px 0;
+    padding: 30px 20px;
     margin-bottom: 30px;
-    border-bottom: 1px solid #eee;
 }
-section:last-child {
-    border-bottom: none;
+
+main section:not(#welcome) {
+    display: none;
 }
-h2 {
-    color: #1e3a8a;
-    border-bottom: 2px solid #3b82f6;
-    padding-bottom: 10px;
-    margin-top: 0;
-}
-/* Style pour les cartes de projet (injectées par JS) */
+
+/* ---------------------------------------------------- */
+/* 4. CARTES DE PROJET (Dynamique) */
+/* ---------------------------------------------------- */
+
 .project-card {
-    border: 1px solid #ddd;
-    padding: 20px;
-    margin-bottom: 15px;
-    border-radius: 6px;
-    background-color: #fcfcfc;
+    border: 1px solid var(--color-border);
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    background-color: var(--color-card-bg);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
 }
 .project-card h3 {
-    color: #3b82f6;
+    color: var(--color-primary);
     margin-top: 0;
+    font-size: 1.5em;
 }
 .project-card .tech {
     font-style: italic;
     font-size: 0.9em;
     color: #555;
+    margin-top: 10px;
 }
+
+/* ---------------------------------------------------- */
+/* 5. BOUTONS ET LIENS */
+/* ---------------------------------------------------- */
+
 .btn {
     display: inline-block;
-    background-color: #3b82f6;
+    background-color: var(--color-primary);
     color: white;
-    padding: 8px 15px;
+    padding: 10px 20px;
     text-decoration: none;
-    border-radius: 4px;
+    border-radius: 5px;
     margin-right: 10px;
-    transition: background-color 0.3s;
+    margin-top: 15px;
+    transition: background-color 0.3s, transform 0.1s;
 }
 .btn:hover {
-    background-color: #1e3a8a;
+    background-color: #005f96;
+    transform: translateY(-1px);
 }
+
+/* ---------------------------------------------------- */
+/* 6. SOUS-ONGLETS (TABS) */
+/* ---------------------------------------------------- */
+
+.tabs-nav {
+    display: flex;
+    margin-bottom: 25px;
+    border-bottom: 2px solid var(--color-border);
+    overflow-x: auto;
+}
+.tabs-nav .tab-link {
+    padding: 10px 15px;
+    text-decoration: none;
+    color: var(--color-text);
+    font-weight: 500;
+    transition: color 0.3s, border-bottom 0.3s;
+    border-bottom: 2px solid transparent;
+    margin-right: 15px;
+    white-space: nowrap;
+}
+.tabs-nav .tab-link.active {
+    color: var(--color-primary);
+    border-bottom: 2px solid var(--color-primary);
+    font-weight: 600;
+}
+.tabs-nav .tab-link:hover:not(.active) {
+    color: var(--color-primary);
+}
+
+.tab-content {
+    padding: 20px 0 0 0;
+    border-top: 1px solid #eee;
+    display: none; 
+}
+.tab-content.active {
+    display: block;
+}
+
+/* ---------------------------------------------------- */
+/* 7. FOOTER */
+/* ---------------------------------------------------- */
+
 footer {
-    background: #333;
-    color: #ffffff;
+    background: var(--color-secondary);
+    color: #c0d8f0;
     text-align: center;
     padding: 15px 0;
-}
-/* -- Ajout à la fin de styles.css -- */
-
-/* Masque par défaut toutes les sections sauf la section d'accueil et le conteneur des projets */
-main section:not(#welcome) {
-    display: none;
+    width: 100%;
 }
 
-/* S'assurer que le conteneur de la liste des projets est visible si sa section parent est visible */
-#projects {
-    /* Le script JS est responsable de gérer l'affichage de #projects si nécessaire */
+/* ---------------------------------------------------- */
+/* 8. STYLES SPÉCIFIQUES À LA SECTION ENGAGEMENT (50% IMAGES) */
+/* ---------------------------------------------------- */
+
+.engagement-item {
+    display: flex; /* Utilise Flexbox */
+    gap: 20px; /* Espace entre l'image et le contenu */
+    margin-bottom: 40px;
+    padding: 0; /* Pas de padding sur l'item parent pour laisser l'image s'étendre */
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
+    background-color: var(--color-card-bg);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    overflow: hidden; /* Empêche l'image de dépasser les bords arrondis */
 }
 
-/* Assurer que le conteneur principal des projets est masqué si la section est masquée */
-#projects-list {
-    /* Masqué ici si la section #projects elle-même est masquée par la règle ci-dessus */
+/* Contenu textuel (texte + listes) - occupe l'autre moitié */
+.engagement-content {
+    flex: 1; /* Prend l'espace restant */
+    padding: 25px;
 }
+.engagement-content h3 {
+    margin-top: 0;
+}
+
+/* Image - occupe la moitié de l'espace total */
+.engagement-image {
+    width: 50%; /* L'image prend 50% de la largeur du conteneur */
+    height: auto; /* Hauteur ajustée automatiquement */
+    min-height: 250px; /* Assure une hauteur minimale pour les grands écrans */
+    object-fit: cover; /* Assure que l'image couvre l'espace sans déformation */
+    opacity: 0.6; /* Transparence initiale (60%) */
+    transition: opacity 0.3s ease-in-out; /* Animation de transparence */
+}
+
+/* Inverser l'ordre pour l'item de la Réserve Militaire */
+/* J'ai modifié le HTML pour mettre le texte avant l'image, 
+   donc nous allons inverser l'ordre des éléments (texte à droite, image à gauche) */
+.engagement-item:nth-child(2) { 
+    flex-direction: row-reverse; 
+}
+
+
+.engagement-item:hover .engagement-image {
+    opacity: 1; /* Transparence à 100% au survol */
+}
+
+/* Ajustement pour les petits écrans (empilement) */
+@media (max-width: 900px) { /* Augmentation du breakpoint pour l'empilement */
+    .engagement-item {
+        flex-direction: column; /* Empile l'image et le texte */
+    }
+    .engagement-image {
+        width: 100%; /* L'image prend 100% de la largeur */
+        height: 250px; /* Hauteur fixe pour éviter une trop grande image */
+    }
+    .engagement-item:nth-child(2) { 
+        flex-direction: column; /* Réinitialise l'inversion */
+    }
+    .engagement-content {
+        padding: 20px;
+    }
+}	
