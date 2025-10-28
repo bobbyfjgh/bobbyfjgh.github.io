@@ -1,0 +1,9 @@
+# hugo.toml
+baseURL = "https://app.netlify.com/projects/cheerful-elf-72e97e/overview"
+languageCode = "fr-fr"
+title = "Mon E-Portfolio Ingénieur"
+theme = "terminal"
+# Ajout des sections de contenu (si elles n'existent pas)
+[taxonomies]
+    category = "categories"
+    series = "series"
