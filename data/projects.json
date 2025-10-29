@@ -1,0 +1,17 @@
+[
+    {
+        "title": "Optimization of Marine Propulsion",
+        "technologies": "SolidWorks Flow Simulation, Computational Fluid Dynamics (CFD)",
+        "description": "This project focused on **Computational Fluid Dynamics (CFD)** to model and analyze marine propulsion systems. The objective was to demonstrate the effectiveness and efficiency gains of using a **Kort Nozzle** compared to standard open propellers, focusing on operational context (e.g., heavy towing, specific speed ranges).",
+        "links": [
+            {
+                "type": "Report",
+                "url": "#"
+            },
+            {
+                "type": "Presentation",
+                "url": "#"
+            }
+        ]
+    }
+]
