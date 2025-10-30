@@ -94,7 +94,7 @@ header nav {
     padding: 0 10px;
 }
 
-/* Liens de navigation (Boutons sans cadre) */
+/* Liens de navigation (Boutons sans cadre, petite police) */
 header nav a {
     background-color: white; 
     color: #333; /* Texte noir/gris foncé */
@@ -106,11 +106,9 @@ header nav a {
     font-weight: bold;
     transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
     
-    /* SUPPRESSION DE LA BORDURE */
-    border: none; 
-    
-    /* MODIFICATION DE LA TAILLE DE LA POLICE */
-    font-size: 0.9em; 
+    /* MODIFICATIONS CLÉS */
+    border: none; /* SUPPRESSION DE LA BORDURE */
+    font-size: 0.9em; /* RÉDUCTION DE LA TAILLE DE LA POLICE */
     
     /* Important pour Flexbox */
     display: inline-block; 
@@ -241,6 +239,16 @@ header nav a:hover {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+/* Nouveau style pour les images de voyage et de mobilité */
+.travel-image {
+    max-width: 250px; /* Taille max raisonnable */
+    height: auto; /* Hauteur ajustée automatiquement */
+    object-fit: cover;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0; 
+}
+
 /* Style pour les cartes de projets qui seront injectées par JS */
 .project-card {
     border: 1px solid #ddd;
@@ -325,19 +333,51 @@ footer {
         margin: 0;
     }
     
-    /* ENGAGEMENT : Inverse l'ordre des éléments pour qu'ils s'empilent */
+    /* ENGAGEMENT et MOBILITÉ : Inverse l'ordre des éléments pour qu'ils s'empilent */
     .engagement-item, 
     .engagement-item:nth-child(even) {
         flex-direction: column;
         text-align: center;
     }
     
-    .engagement-image {
+    .engagement-image,
+    .travel-image {
         margin-top: 15px;
         margin-bottom: 10px;
+        /* Sur mobile, on donne une taille max pour éviter qu'elles soient trop larges */
+        max-width: 80%;
+        height: auto;
     }
     
     .engagement-content {
         padding: 0;
     }
+}
+
+/* ================================================================= */
+/* VIDEO STYLING */
+/* ================================================================= */
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* Ratio 16:9 (hauteur / largeur) */
+    height: 0;
+    overflow: hidden;
+    
+    /* MODIFICATIONS ICI */
+    max-width: 600px; /* Réduit la taille maximale de la vidéo */
+    margin: 20px auto; /* Centre la vidéo horizontalement */
+    
+    background: #000;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
 }
