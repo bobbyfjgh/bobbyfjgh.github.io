@@ -56,11 +56,11 @@ strong {
 }
 
 /* ================================================================= */
-/* HEADER & NAVIGATION STYLING (Bannière Blanche & Boutons) */
+/* HEADER & NAVIGATION STYLING (Bannière Blanche) */
 /* ================================================================= */
 
 header {
-    /* Fond Blanc demandé */
+    /* Fond Blanc */
     background-color: #ffffff; 
     background-image: none;
     
@@ -74,7 +74,6 @@ header {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Supprime le filtre sombre */
 header::before {
     content: none;
 }
@@ -87,14 +86,13 @@ header h1 {
 
 header nav {
     margin-top: 15px;
-    display: flex; /* Active Flexbox */
-    justify-content: center; /* Centre les liens */
-    flex-wrap: nowrap; /* EMPÊCHE LE RETOUR À LA LIGNE sur desktop */
-    overflow-x: auto; /* Permet un défilement horizontal si l'écran est trop petit */
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    overflow-x: auto;
     padding: 0 10px;
 }
 
-/* Liens de navigation (Boutons sans cadre, petite police) */
 header nav a {
     background-color: white; 
     color: #333; /* Texte noir/gris foncé */
@@ -106,13 +104,11 @@ header nav a {
     font-weight: bold;
     transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
     
-    /* MODIFICATIONS CLÉS */
-    border: none; /* SUPPRESSION DE LA BORDURE */
-    font-size: 0.9em; /* RÉDUCTION DE LA TAILLE DE LA POLICE */
+    border: none;
+    font-size: 0.9em;
     
-    /* Important pour Flexbox */
     display: inline-block; 
-    flex-shrink: 0; /* Empêche les liens d'être réduits */
+    flex-shrink: 0;
 }
 
 header nav a:hover {
@@ -123,7 +119,7 @@ header nav a:hover {
 
 
 /* ================================================================= */
-/* WELCOME SECTION STYLING (Photo à gauche) */
+/* WELCOME SECTION STYLING (Photo et Vidéo) */
 /* ================================================================= */
 
 .welcome-content {
@@ -134,11 +130,11 @@ header nav a:hover {
 }
 
 .profile-photo {
-    /* CONTRAINTE DE TAILLE POUR LA PHOTO DE PROFIL */
+    /* Photo de profil ronde */
     width: 180px; 
     height: 180px;
     object-fit: cover;
-    border-radius: 50%; /* Image ronde */
+    border-radius: 50%;
     flex-shrink: 0; 
     border: 4px solid #0056b3; 
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
@@ -146,6 +142,30 @@ header nav a:hover {
 
 .welcome-text {
     flex-grow: 1; 
+}
+
+/* Style de la vidéo (taille réduite et centrée) */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* Ratio 16:9 */
+    height: 0;
+    overflow: hidden;
+    
+    max-width: 600px; /* Réduit la taille maximale de la vidéo */
+    margin: 20px auto; /* Centre la vidéo */
+    
+    background: #000;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
 }
 
 
@@ -191,7 +211,7 @@ header nav a:hover {
 }
 
 /* ================================================================= */
-/* PROJECT & ENGAGEMENT STYLING (Incluant le Zig-Zag) */
+/* PROJECT & ENGAGEMENT STYLING (Zig-Zag) */
 /* ================================================================= */
 
 .project-summary-list {
@@ -212,7 +232,7 @@ header nav a:hover {
     margin: 30px 0;
 }
 
-/* Engagement Items (Civic/Sustainability) */
+/* Engagement Items (Civic/Sustainability/Hobbies) */
 .engagement-item {
     display: flex;
     align-items: center;
@@ -224,7 +244,7 @@ header nav a:hover {
 }
 
 .engagement-item:nth-child(even) {
-    flex-direction: row-reverse; /* CRÉE L'EFFET ZIG-ZAG (image à droite) */
+    flex-direction: row-reverse; /* Effet ZIG-ZAG */
 }
 
 .engagement-content {
@@ -232,61 +252,52 @@ header nav a:hover {
     padding: 0 20px;
 }
 
+/* Styles pour les images d'engagement (Civic/Jardinage/etc.) */
 .engagement-image {
-    /* AUCUNE CONTRAINTE DE TAILLE POUR LES IMAGES D'ENGAGEMENT (taille naturelle) */
+    /* Taille naturelle (pas de contrainte de taille ici) */
     object-fit: cover;
     border-radius: 4px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Nouveau style pour les images de voyage et de mobilité */
+/* Styles pour les images de voyage et de mobilité (International Mobility) */
 .travel-image {
-    max-width: 250px; /* Taille max raisonnable */
-    height: auto; /* Hauteur ajustée automatiquement */
+    max-width: 250px; 
+    height: auto; 
     object-fit: cover;
     border-radius: 4px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     flex-shrink: 0; 
 }
 
-/* Style pour les cartes de projets qui seront injectées par JS */
-.project-card {
-    border: 1px solid #ddd;
-    border-left: 5px solid #0056b3;
-    padding: 15px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+
+/* =================================================================
+   SPORT (Images flottantes à gauche et empilées - AJOUTÉ)
+   ================================================================= */
+
+.sport-float-image {
+    width: 200px;
+    height: 200px; /* Force l'image à être carrée */
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
 }
 
-.project-card h4 {
-    color: #0056b3;
-    margin-top: 0;
-    font-size: 1.2em;
+/* Flotte à gauche (texte à droite) */
+.sport-float-image.left-float {
+    float: left;
+    margin-right: 20px;
 }
 
-.project-card .technologies {
-    font-size: 0.9em;
-    color: #666;
-    margin-bottom: 10px;
+/* Force l'élément suivant à commencer sous l'élément flottant à gauche (empilement) */
+.clear-left {
+    clear: left;
 }
 
-.project-card .links a {
-    display: inline-block;
-    background-color: #f4f4f4;
-    color: #0056b3;
-    padding: 5px 10px;
-    margin-right: 10px;
-    border-radius: 3px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.2s;
+.clearfix {
+    clear: both;
 }
-
-.project-card .links a:hover {
-    background-color: #e0e0e0;
-}
-
 
 /* ================================================================= */
 /* FOOTER */
@@ -323,7 +334,7 @@ footer {
 
     /* HEADER : Empile les liens de navigation (Comportement Mobile Standard) */
     header nav {
-        flex-direction: column; /* Les liens s'empilent verticalement */
+        flex-direction: column;
         gap: 8px;
         padding: 0 10px;
         flex-wrap: wrap; 
@@ -344,7 +355,7 @@ footer {
     .travel-image {
         margin-top: 15px;
         margin-bottom: 10px;
-        /* Sur mobile, on donne une taille max pour éviter qu'elles soient trop larges */
+        /* Taille max raisonnable sur mobile */
         max-width: 80%;
         height: auto;
     }
@@ -352,32 +363,18 @@ footer {
     .engagement-content {
         padding: 0;
     }
-}
 
-/* ================================================================= */
-/* VIDEO STYLING */
-/* ================================================================= */
-
-.video-container {
-    position: relative;
-    padding-bottom: 56.25%; /* Ratio 16:9 (hauteur / largeur) */
-    height: 0;
-    overflow: hidden;
+    /* SPORTS : Empêche le float et centre les images (AJOUTÉ) */
+    .sport-float-image {
+        float: none;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 150px;
+        height: 150px;
+    }
     
-    /* MODIFICATIONS ICI */
-    max-width: 600px; /* Réduit la taille maximale de la vidéo */
-    margin: 20px auto; /* Centre la vidéo horizontalement */
-    
-    background: #000;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-}
-
-.video-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: 0;
+    .clear-left {
+        clear: none; /* Désactive le clear lorsque le float est désactivé */
+    }
 }
