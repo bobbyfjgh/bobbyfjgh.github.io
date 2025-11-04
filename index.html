@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Engineering E-Portfolio - Antoine Chaptal</title>
     <link rel="stylesheet" href="css/styles.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
 </head>
 <body>
     <header>
@@ -73,10 +75,13 @@
                 <h3>TIPE (Supervised Personal Initiative Work)</h3>
                 <p>As part of the <strong>CPGE</strong> curriculum, I conducted two advanced research projects focusing on physics and engineering principles:</p>
                 <div class="project-summary-list">
-                    <h4>1. Resistance of Climbing Ropes</h4>
-                    <p><strong>Focus:</strong> Experimental study of the physical parameters influencing the shock absorption and tensile strength of climbing ropes, applying non-linear mechanics concepts.</p>
-                    <h4>2. Optimization of Marine Propulsion</h4>
-                    <p><strong>Focus:</strong> Modeling and simulation aimed at optimizing the efficiency and energy consumption of marine propulsion systems, integrating fluid dynamics and control theory.</p>               
+                    
+                    <h4>Optimization of Marine Propulsion</h4>
+                    <p><strong>Focus:</strong> Modeling and simulation aimed at optimizing the efficiency and energy consumption of marine propulsion systems, integrating fluid dynamics and control theory.</p>  
+<p>My supervised personal project (TIPE) focused on addressing the question: <strong>"Is the Kort nozzle still a suitable solution for marine propulsion?"</strong> </p><p> The scientific approach involved a structured analysis combining theoretical modeling, physical experimentation, and computational simulation.</p>
+<p>The study began with a <strong>theoretical investigation</strong> of propeller performance, both in isolation and when fitted with a Kort nozzle. Principles of fluid mechanics, specifically <strong>Bernoulli's relation</strong> and the <strong>Momentum Theorem (Théorème de la quantité de mouvement)</strong>, were applied to establish fundamental propulsion equations. This step provided a theoretical baseline, notably establishing the relationship for a free propeller where the acceleration of the fluid far downstream (\(U_{a}(\infty)\)) is twice the acceleration at the propeller plane (\(U_{a}(0)\)).</p>
+<p>A dedicated <strong>experimental setup</strong> was designed and fabricated to validate the theoretical models and quantify the performance difference. The core of the experiment involved measuring the <strong>water velocity at the propeller exit</strong> (jet velocity) using a <strong>Pitot tube</strong>. Measurements were taken for both the unprotected propeller and the ducted propeller (with the Kort nozzle) across a range of propeller rotation speeds (\(\text{rad/s}\)). The analysis of the results directly demonstrated a <strong>higher water exit velocity</strong> with the nozzle compared to the bare propeller, thus quantifying the effect of the Kort nozzle.</p>
+<p>Finally, <strong>numerical simulations</strong> were conducted using Computational Fluid Dynamics (CFD) software to model the flow field around the propeller-nozzle system. These simulations provided visual flow contours and quantitative velocity data, which were then **compared (confrontés)** with the experimental measurements. This triangulation of approaches—Theory, Experiment, and Simulation—allowed for a comprehensive evaluation of the nozzle's impact on thrust and efficiency (\(\eta_{hélice}\)) at various speeds (\(V_0 = 0\,m/s\) and \(V_0 = 1\,m/s\)), ultimately confirming the appropriateness of using or not using the Kort nozzle depending on the context</p>            
 		   <h4>Bilan</h4> 
 		   <p>This work enabled me to develop a <strong>clear scientific methodology</strong>, utilizing the engineering tools at my disposal (CFD software, numerical resolutions, scale model development, etc.).</p>
 		</div>
@@ -263,7 +268,7 @@
         </section>
         <section id="contact">
             <h2>Contact</h2>
-            <p>You can contact me directly via the links below, or by using the contact form.</p>
+            <p>You can contact me directly via the links below.</p>
             <p>
                 Email : <a href="mailto:antoine.chaptaldechanteloup@etu.inp-n7.fr">antoine.chaptaldechanteloup@etu.inp-n7.fr</a><br>
                 LinkedIn : <a href="https://linkedin.com/in/antoine-chaptal-8b1a2a37b" target="_blank">Mon Profil LinkedIn</a><br>
