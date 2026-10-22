@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Antoine Chaptal — e-portfolio</title>
+  <meta name="description" content="E-portfolio of Antoine Chaptal, engineering student in networks and telecommunications at ENSEEIHT (Toulouse INP).">
+  <link rel="alternate" hreflang="fr" href="index.html">
+  <link rel="alternate" hreflang="en" href="en.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/portfolio.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="#top">Antoine Chaptal</a>
+    <nav class="site-nav" aria-label="Sections">
+      <a href="#about">About</a>
+      <a href="#education">Education</a>
+      <a href="#mobility">Mobility</a>
+      <a href="#engagement">Engagement</a>
+      <a href="#sport">Sport</a>
+      <a href="#career">Career</a>
+      <span class="lang"><a href="index.html" hreflang="fr" lang="fr">FR</a> · <strong>EN</strong></span>
+    </nav>
+  </div>
+</header>
+
+<main id="top" class="wrap">
+
+  <section class="hero" aria-label="Introduction">
+    <div class="hero-main">
+      <div class="hero-text">
+        <h1>Antoine Chaptal</h1>
+        <p class="lead">Engineering student in networks and telecommunications at ENSEEIHT, Toulouse INP. I like projects carried through from start to finish: design, code, test, document, and do it as a team.</p>
+      </div>
+      <figure class="portrait">
+        <img src="img/portrait.jpg" alt="Portrait of Antoine Chaptal" width="800" height="800">
+      </figure>
+    </div>
+
+    <dl class="facts">
+      <div><dt class="label">School</dt><dd>ENSEEIHT, Toulouse INP</dd></div>
+      <div><dt class="label">Track</dt><dd>Telecommunications, Year 2</dd></div>
+      <div><dt class="label">Looking for</dt><dd>A 3-month internship in networking, from June 2027</dd></div>
+      <div><dt class="label">Documents</dt><dd class="links"><a href="pdfs/CV_Antoine_Chaptal_EN.pdf">CV (EN)</a><a href="pdfs/CV_Antoine_Chaptal_FR.pdf">CV (FR)</a><a href="https://linkedin.com/in/antoine-chaptal">LinkedIn</a></dd></div>
+    </dl>
+  </section>
+
+  <section id="about" class="section" aria-labelledby="h-about">
+    <div class="section-head">
+      <div class="section-num">01</div>
+      <h2 id="h-about">About</h2>
+    </div>
+    <div class="section-body">
+      <p>After a childhood in Brussels and three years of preparatory classes in Le Mans and Tours, I joined ENSEEIHT in 2025, in the telecommunications track. My technical work focuses on networks: addressing, routing, services.</p>
+      <p>Outside school, I lead a scout troop and serve as an operational reservist in the 1st Parachute Chasseur Regiment (1er RCP).</p>
+      <a class="pitch" href="https://www.youtube.com/watch?v=CleSc_Oj3v0">
+        <span class="play" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="#1E2D4F"/></svg></span>
+        <span class="txt"><strong>Elevator pitch</strong><span>Two minutes: my path, projects, commitments and mobility plans</span></span>
+      </a>
+    </div>
+  </section>
+
+  <section id="education" class="section" aria-labelledby="h-education">
+    <div class="section-head">
+      <div class="section-num">02</div>
+      <h2 id="h-education">Education and projects</h2>
+    </div>
+    <div class="section-body">
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Period</th><th>Education</th></tr></thead>
+          <tbody>
+            <tr><td class="when">2025 – 2028</td><td><strong>Toulouse INP – ENSEEIHT</strong>, master's-level engineering degree in computer science and telecommunications, telecommunications track. Networks and protocols (TCP/IP), Unix systems, routing, signal processing, object-oriented programming. Managership option: agile project management (Scrum), leadership.</td></tr>
+            <tr><td class="when">2022 – 2025</td><td><strong>CPGE PCSI / PSI*</strong>, Le Mans and Tours: intensive preparatory classes for the French engineering schools. Mathematics, physics, engineering sciences, algorithms (Python, SQL).</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Main project: an IP router with a cache, in Ada</h3>
+      <p class="meta">January 2026 · team of 3 · Ada, IP routing, FIFO / LRU / LFU cache, testing</p>
+      <p>Assign the right route to each packet from a routing table, then add a route cache, as a tree or a linked list, with three replacement policies: FIFO, LRU and LFU.</p>
+      <p><strong>My role.</strong> Parsing the routing table and the packets, the linked-list cache scenario, the types module, and part of the report.</p>
+      <p><strong>What I took from it.</strong> The discipline of typing and generics in Ada, and teamwork: splitting the work and assembling modules written by others.</p>
+
+      <h3>Other projects</h3>
+      <div class="table-wrap">
+        <table>
+          <tbody>
+            <tr><td class="when">May 2026</td><td><strong>ArchiDu7, a logic circuit simulator</strong> — team of 9, using Scrum. A JavaFX application that reads SHDL scripts and simulates the circuit. I built the text editor, the menu structure and the toolbar.</td></tr>
+            <tr><td class="when">2026</td><td><strong>Network infrastructure for an ISP</strong> — VLSM/CIDR addressing, RIP/OSPF routing, NAT gateways, Web and DNS servers, traffic analysis with Wireshark.</td></tr>
+            <tr><td class="when">2026</td><td><strong>Unix mini-shell in C</strong> — processes (fork, exec), pipes, redirections, memory checks with Valgrind.</td></tr>
+            <tr><td class="when">January 2026</td><td><strong>Shortest path on a grid</strong> — in pairs, in C: lowest-cost path on an elevation grid, modular code, unit tests.</td></tr>
+            <tr><td class="when">2024 – 2025</td><td><strong>Research project: is the Kort nozzle still a good fit?</strong> — theory, a test bench with a Pitot tube, CFD simulation compared with measurements: the outlet speed is higher with the nozzle.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">Competitions and societies: Thales BattleDev (October 2025), ENSEEIHT CTF, computer science society, cybersecurity society.</p>
+    </div>
+  </section>
+
+  <section id="mobility" class="section" aria-labelledby="h-mobility">
+    <div class="section-head">
+      <div class="section-num">03</div>
+      <h2 id="h-mobility">International mobility</h2>
+    </div>
+    <div class="section-body">
+      <ul>
+        <li><strong>Brussels</strong>: a childhood in a European, multicultural environment.</li>
+        <li><strong>Germany, Austria, Italy</strong>: several stays.</li>
+        <li><strong>Camino del Norte</strong>: two sections of the Way of Saint James, on foot, over the past two years.</li>
+      </ul>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Language</th><th>Level</th></tr></thead>
+          <tbody>
+            <tr><td class="when">French</td><td>Native</td></tr>
+            <tr><td class="when">English</td><td>B2, fluent</td></tr>
+            <tr><td class="when">Spanish</td><td>Basic</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">17-week mobility (semester 9) in preparation: see the mobility projects in section 06.</p>
+    </div>
+  </section>
+
+  <section id="engagement" class="section" aria-labelledby="h-engagement">
+    <div class="section-head">
+      <div class="section-num">04</div>
+      <h2 id="h-engagement">Sustainability and civic engagement</h2>
+    </div>
+    <div class="section-body">
+      <div class="table-wrap">
+        <table>
+          <tbody>
+            <tr><td class="when">Since 2025</td><td><strong>Reservist, 1er RCP</strong> — officer-track military preparation (PMS) in 2021-2022, initial military training in July 2026: endurance, discipline, hardiness, team cohesion.</td></tr>
+            <tr><td class="when">Since 2025</td><td><strong>Scout troop leader</strong> — I lead a troop of about twelve young people aged 12 to 17, and handle logistics, supplies and budget for outings and camps.</td></tr>
+            <tr><td class="when">Summers 2024 and 2025</td><td><strong>Restoring the Blossac manor</strong> — volunteer work on a manor in Brittany badly hit by floods.</td></tr>
+            <tr><td class="when">At ENSEEIHT</td><td><strong>Climate Fresk</strong>, and a role in the play "King Kong", a project against sexual and gender-based violence in the student community.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="photos">
+        <figure>
+          <img src="img/blossac.jpg" alt="Groundwork at the Blossac manor" loading="lazy" width="1536" height="2040">
+          <figcaption>Work at the Blossac manor</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="sport" class="section" aria-labelledby="h-sport">
+    <div class="section-head">
+      <div class="section-num">05</div>
+      <h2 id="h-sport">Sport and activities</h2>
+    </div>
+    <div class="section-body">
+      <div class="table-wrap">
+        <table>
+          <tbody>
+            <tr><td class="when">Sport</td><td>Running, road cycling, canoeing</td></tr>
+            <tr><td class="when">Music</td><td>Trumpet, harmonica</td></tr>
+            <tr><td class="when">Other</td><td>Gardening, pastry</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="photos">
+        <figure>
+          <img src="img/course.jpg" alt="Antoine in running gear by the ocean" loading="lazy" width="856" height="1600">
+          <figcaption>Running</figcaption>
+        </figure>
+        <figure>
+          <img src="img/canoe.jpg" alt="Antoine in a life jacket, on the water" loading="lazy" width="554" height="445">
+          <figcaption>Canoeing</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="career" class="section" aria-labelledby="h-career">
+    <div class="section-head">
+      <div class="section-num">06</div>
+      <h2 id="h-career">Career project</h2>
+    </div>
+    <div class="section-body">
+      <p>I am looking for a 3-month technical internship from June 2027, in networks and systems. My projects, from the Ada router to the ISP infrastructure, led me to this field.</p>
+      <p class="note">CV in <a href="pdfs/CV_Antoine_Chaptal_EN.pdf">English</a> and <a href="pdfs/CV_Antoine_Chaptal_FR.pdf">French</a>, <a href="https://linkedin.com/in/antoine-chaptal">LinkedIn</a> profile, elevator pitch in section 01.</p>
+
+      <h3>Three role models</h3>
+      <p>In progress: I am arranging conversations with ENSEEIHT alumni. Each profile will be presented here: background, missions, key skills, advice received, and what I take from it.</p>
+
+      <h3>Three mobility projects</h3>
+      <div class="table-wrap">
+        <table>
+          <tbody>
+            <tr><td class="when">Project 1</td><td><strong>Academic exchange in Ireland</strong></td></tr>
+            <tr><td class="when">Project 2</td><td><strong>Internship in a Nordic country</strong>, Sweden or Finland</td></tr>
+            <tr><td class="when">Project 3</td><td class="dim">To be defined, in line with the role models</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Work experience</h3>
+      <div class="table-wrap">
+        <table>
+          <tbody>
+            <tr><td class="when">2026</td><td>Seasonal work in the vineyards</td></tr>
+            <tr><td class="when">Summers 2021 to 2023</td><td>Gardener: maintaining private gardens</td></tr>
+            <tr><td class="when">July 2020</td><td>Farm worker, seasonal</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Degree requirements</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Requirement</th><th>Status</th></tr></thead>
+          <tbody>
+            <tr><td>English B2+ (semester 9)</td><td>Current level: B2</td></tr>
+            <tr><td>17-week mobility (semester 9)</td><td>In preparation</td></tr>
+            <tr><td>Civic engagement, 40 h (semester 9)</td><td>Scouting, reserve, Blossac</td></tr>
+            <tr><td>Internships (semesters 6 and 8)</td><td>3-month internship sought for June 2027</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <a href="mailto:antoine.chaptaldechanteloup@etu.inp-n7.fr">antoine.chaptaldechanteloup@etu.inp-n7.fr</a>
+    <span>Updated October 2026</span>
+  </div>
+</footer>
+
+</body>
+</html>

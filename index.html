@@ -1,284 +1,243 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Engineering E-Portfolio - Antoine Chaptal</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Antoine Chaptal — e-portfolio</title>
+  <meta name="description" content="E-portfolio d'Antoine Chaptal, élève ingénieur en réseaux et télécommunications à l'ENSEEIHT (Toulouse INP).">
+  <link rel="alternate" hreflang="fr" href="index.html">
+  <link rel="alternate" hreflang="en" href="en.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/portfolio.css">
 </head>
 <body>
-    <header>
-        <h1>e-Portfolio - Antoine Chaptal</h1>
-        <nav>
-            <a href="#welcome">Welcome</a>
-            <a href="#engineering-course">Engineering Course</a>
-            <a href="#international-mobility">International Mobility</a>
-            <a href="#sustainability">Sustainability & Civic Engagement</a>
-            <a href="#sports">Sport & other activities</a>
-            <a href="#career-development">Career Development</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
-    <main>
-        <section id="welcome">
-            <h2>Welcome</h2>
-            <div class="welcome-content">
-                <img src="img/IMG_4602.jpg" alt="Antoine Chaptal Profile Picture" class="profile-photo">
-                <div class="welcome-text">
-                    <p>I am <strong>Antoine Chaptal</strong>. Following intensive scientific preparatory classes (<strong>CPGE</strong>) in Western France, I am now an engineering student at <strong>ENSEEIHT in Toulouse</strong>, specializing in Computer Science and Telecommunications. My professional goal is to work in the field of <strong>Cybersecurity</strong>.</p>
-                    <p>This portfolio showcases my academic journey, technical expertise, practical projects, and personal commitments that define my professional profile. Feel free to navigate through the sections below to learn more about my background.</p>
-                    <p>Connect with me on: <a href="https://linkedin.com/in/antoine-chaptal-8b1a2a37b" target="_blank"><strong>in</strong></a></p>
-                </div>
-            </div>
-            <hr class="project-separator"> 
-            <h3>Elevator Pitch</h3>
-            <div class="video-container small-video"> 
-                <iframe 
-                    width="560" 
-                    height="315" 
-                    src="https://www.youtube.com/embed/CleSc_Oj3v0" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen>
-                </iframe>
-            </div>
-        </section>
-        <section id="engineering-course">
-            <h2>Engineering Course</h2>
-            <div class="tabs-nav">
-                <a href="#courses-tab" class="tab-link active">Courses</a>
-                <a href="#projects-tab" class="tab-link">Projects</a>
-            </div>
-            <div id="courses-tab" class="tab-content active">
-                <h3>My Computer Science & Telecommunications Engineering Path</h3>
-                <p>My program at ENSEEIHT provides me with a strong dual competence in computer science, from algorithmic fundamentals to software engineering, and in telecommunications, with a specific focus on network and information systems security. These fields are central to my professional goal, which is oriented toward cybersecurity.</p>
-                <hr class="project-separator">
-                <h4>Course Details</h4>
-<p></p>
-<h4>Semester 5</h4>
-                <p>Semester 5 establishes the advanced foundations of the specialization and covers the following essential areas:</p>
-                <ul>
-                    <li><strong>Optimisation</strong></li>
-                    <li><strong>Probability</strong></li>
-                    <li><strong>Statistics</strong></li>
-                    <li><strong>Computer science and Architecture</strong></li>
-                    <li><strong>Modelisation</strong></li>
-                    <li><strong>Career and Management Courses</strong></li>
-    <li><strong>Language courses (English and Spanish)</strong></li>
-    <li><strong>Sport</strong></li>
-                </ul>
-                <p>This content will be expanded upon later with details of other semesters.</p>
-            </div>
-            <div id="projects-tab" class="tab-content">
-                <h3>TIPE (Supervised Personal Initiative Work)</h3>
-                <p>As part of the <strong>CPGE</strong> curriculum, I conducted two advanced research projects focusing on physics and engineering principles:</p>
-                <div class="project-summary-list">
-                    
-                    <h4>Optimization of Marine Propulsion</h4>
-                    <p><strong>Focus:</strong> Modeling and simulation aimed at optimizing the efficiency and energy consumption of marine propulsion systems, integrating fluid dynamics and control theory.</p>  
-<p>My supervised personal project (TIPE) focused on addressing the question: <strong>"Is the Kort nozzle still a suitable solution for marine propulsion?"</strong> </p><p> The scientific approach involved a structured analysis combining theoretical modeling, physical experimentation, and computational simulation.</p>
-<p>The study began with a <strong>theoretical investigation</strong> of propeller performance, both in isolation and when fitted with a Kort nozzle. Principles of fluid mechanics, specifically <strong>Bernoulli's relation</strong> and the <strong>Momentum Theorem (Théorème de la quantité de mouvement)</strong>, were applied to establish fundamental propulsion equations. This step provided a theoretical baseline, notably establishing the relationship for a free propeller where the acceleration of the fluid far downstream (\(U_{a}(\infty)\)) is twice the acceleration at the propeller plane (\(U_{a}(0)\)).</p>
-<p>A dedicated <strong>experimental setup</strong> was designed and fabricated to validate the theoretical models and quantify the performance difference. The core of the experiment involved measuring the <strong>water velocity at the propeller exit</strong> (jet velocity) using a <strong>Pitot tube</strong>. Measurements were taken for both the unprotected propeller and the ducted propeller (with the Kort nozzle) across a range of propeller rotation speeds (\(\text{rad/s}\)). The analysis of the results directly demonstrated a <strong>higher water exit velocity</strong> with the nozzle compared to the bare propeller, thus quantifying the effect of the Kort nozzle.</p>
-<p>Finally, <strong>numerical simulations</strong> were conducted using Computational Fluid Dynamics (CFD) software to model the flow field around the propeller-nozzle system. These simulations provided visual flow contours and quantitative velocity data, which were then **compared (confrontés)** with the experimental measurements. This triangulation of approaches—Theory, Experiment, and Simulation—allowed for a comprehensive evaluation of the nozzle's impact on thrust and efficiency (\(\eta_{hélice}\)) at various speeds (\(V_0 = 0\,m/s\) and \(V_0 = 1\,m/s\)), ultimately confirming the appropriateness of using or not using the Kort nozzle depending on the context</p>            
-		   <h4>Bilan</h4> 
-		   <p>This work enabled me to develop a <strong>clear scientific methodology</strong>, utilizing the engineering tools at my disposal (CFD software, numerical resolutions, scale model development, etc.).</p>
-		</div>
-                <hr class="project-separator">
-                <h3>Computer Science & Cybersecurity Projects</h3>
-                <div class="project-summary-list">
-                    <h4>Competitive Programming & CTF</h4>
-                    <ul>
-                        <li>Participation in the <strong>Thales BattleDev</strong> (October 2025).</li>
-                        <li>Involvement in a <strong>CTF (Capture The Flag)</strong> competition organized by <strong>ENSEEIHT</strong>, focusing on real-world cybersecurity challenges.</li>
-                    </ul>
-                    
-                    <h4>Active Involvement</h4>
-                    <ul>
-                        <li>Member of the <strong>Computer Science Association</strong> of <strong>ENSEEIHT</strong>.</li>
-                        <li>Active member of the <strong>Cybersecurity Association</strong>, deepening knowledge in penetration testing, threat analysis, and secure development practices.</li>
-                    </ul>
-                </div>
-                <hr class="project-separator">
-                <h3>E-Portfolio Development</h3>
-                <div class="project-summary-list">
-                    <h4>Professional E-Portfolio: Design and Implementation</h4>
-                    <p>Conceptualization, design, and implementation of this personal e-portfolio from scratch.</p>
-                    <ul>
-                        <li><strong>HTML5 (Structure)</strong></li>
-                        <li><strong>CSS3 (Styling & Layout)</strong></li>
-                        <li><strong>JavaScript (Interactivity)</strong></li>
-                    </ul>
-                </div>
-            </div>
-        </section>      
-        <section id="international-mobility">
 
-            <h2>International Mobility</h2>
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="#top">Antoine Chaptal</a>
+    <nav class="site-nav" aria-label="Sections">
+      <a href="#presentation">Présentation</a>
+      <a href="#formation">Formation</a>
+      <a href="#mobilite">Mobilité</a>
+      <a href="#engagement">Engagement</a>
+      <a href="#sport">Sport</a>
+      <a href="#carriere">Carrière</a>
+      <span class="lang"><strong>FR</strong> · <a href="en.html" hreflang="en" lang="en">EN</a></span>
+    </nav>
+  </div>
+</header>
 
-            <p>A key aspect of my profile is my strong international exposure and a proactive approach to global professional integration. This section details my cultural background and my future plans for academic and professional mobility abroad.</p>
-            <div class="tabs-nav">
-                <a href="#background" class="tab-link active">Cultural Background</a> 
-                <a href="#pce" class="tab-link">PCE (Collective Project Abroad)</a>
-                <a href="#lv2" class="tab-link">LV2 (Second Living Language)</a>
-                <a href="#language-test" class="tab-link">Language Tests & Certifications</a>
-            </div>
-            <div id="background" class="tab-content active">
-                <h3>Multicultural Environment & European Exposure</h3>
-                <div class="engagement-item">
-                    <div class="engagement-content">
-                        <p>Spending my childhood in <strong>Brussels, Belgium</strong>, provided me with early exposure to a highly <strong>multicultural and international environment</strong>. This experience fostered my adaptability and ability to work effectively with diverse profiles, a valuable asset in engineering and global collaborations.</p>
-                    <div>
-                    <img src="img/brussels.jpg" alt="Image de Bruxelles" class="travel-image">
-                </div>
-                <hr class="project-separator">
-                <h4>European Travels and Cultural Immersion</h4>
-                <div class="engagement-item">
-                    <div class="engagement-content">
-                        <p>My interest in European cultures is reinforced by multiple trips to <strong>Germany</strong>, <strong>Austria</strong>, and <strong>Italy</strong>. Over the last two years, I completed two sections of the <strong>Camino del Norte</strong> (Way of Saint James).</p>
-                    </div>
-                    <img src="img/camino.jpg" alt="Image du Camino del Norte" class="travel-image">
-                </div>              
-                <hr class="project-separator">
-                <h4>Future Mobility Plans</h4>
-                <p>I am actively planning my future international experiences to specialize in Cybersecurity and gain a deeper understanding of global technological governance. My primary goals include:</p>
-                <ul>
-                    <li>An <strong>academic exchange</strong> in <strong>Ireland</strong> to study advanced topics in digital security and benefit from a different learning methodology.</li>
-                    <li>An <strong>internship</strong> in a <strong>Nordic country</strong> (e.g., Sweden or Finland), known for their cutting-edge technology policies and focus on sustainable innovation in the tech sector.</li>
-                </ul>
-                <p>These experiences are motivated by a desire to challenge myself professionally and contribute to international teams on complex engineering challenges.</p>
-            </div>
-            <div id="pce" class="tab-content"><h3>Collective Project Abroad (PCE) (Coming soon)</h3><p>Content coming soon.</p></div>
-            <div id="lv2" class="tab-content"><h3>Second Living Language (LV2) (Coming soon)</h3><p>Content coming soon.</p></div>
-            <div id="language-test" class="tab-content"><h3>Certifications (TOEIC, TOEFL, etc.) (Coming soon)</h3><p>Content coming soon.</p></div>
-        </section>
-        
-        <section id="sustainability">
-            <h2>Sustainability & Civic Engagement</h2>
-            <div class="engagement-item">
-                <div class="engagement-content">
-                    <h3>Assistant Scout Troop Leader (Toulouse)</h3>
-                    <p>As an <strong>Assistant Troop Leader</strong> in Toulouse, I am involved in mentoring, animating, and guiding the progress of a group of young people. This mission is based on the five fundamental aims of scouting:</p>
-                    <ul>
-                        <li>The <strong>Practical sense</strong></li>
-                        <li><strong>Personality</strong> development</li>
-                        <li><strong>Spiritual</strong> values</li>
-                        <li><strong>Service</strong> spirit</li>
-                        <li><strong>Health</strong> maintenance</li>
-                    </ul>
-                </div>
-                <img src="img/scout.jpg" alt="Scouting image" class="engagement-image">
-            </div>
+<main id="top" class="wrap">
 
-            <div class="engagement-item">
-                <div class="engagement-content">
-                    <h3>Candidacy for the French Army Operational Reserve</h3>
-                    <p>Content regarding my candidacy and commitment to the <strong>Operational Reserve</strong> is <strong>COMING SOON</strong>.</p>
-                </div>
-                <img src="img/reserve.jpg" alt="Military Reserve image" class="engagement-image">
-            </div>           
-            <div class="engagement-item">
-                <div class="engagement-content">
-                    <h3>Civic Engagement at ENSEEIHT</h3>
-                    <p>Within <strong>ENSEEIHT</strong>, I actively participated in societal and environmental awareness initiatives:</p>
-                    <ul>
-                        <li>Participation in the <strong>Climate Fresk</strong> (<strong>La Fresque du Climat</strong>) to understand and spread awareness about climate change issues.</li>
-                        <li>Acting in the play <strong>"King Kong"</strong>, a project aimed at fighting <strong>Sexual and Gender-Based Harassment and Violence (SGBHV)</strong> within the student community.</li>
-                    </ul>
-                </div>
-                <img src="img/inclusion.jpg" alt="Image de l'ENSEEIHT ou d'une association" class="engagement-image">
-            </div>
-        </section>
-        <section id="sports">
-            <h2>Sport & other activities</h2>
-            <img src="img/course.jpg" alt="Running image" class="sport-float-image left-float">
-            <img src="img/canoe.jpg" alt="Canoeing image" class="sport-float-image left-float">
-            <p>I maintain an active lifestyle through various sports, which help me build endurance, discipline, and focus:</p>
-            <ul>
-                <li><strong>Running</strong></li>
-                <li><strong>Cycling</strong></li>
-                <li><strong>Canoeing/Kayaking</strong></li>
-            </ul>
-            <div class="clear-left">
-                <hr class="project-separator">
-                <h3>Hobbies & Manual Skills</h3>
-            </div>
-            <div class="engagement-item">
-                <div class="engagement-content">
-                    <ul>
-                        <li><strong>Cooking (rather pastries...)</strong></li>
-                        <li><strong>Gardening</strong></li>
-                        <li><strong>Music (Trumpett and Horn)</strong></li>
-                    </ul>
-                </div>
-                <img src="img/jardinage.jpg" alt="Image de jardinage" class="travel-image">
-            </div>
-	    <div class="clear-left">
-                <hr class="project-separator">
-                <h3>Heritage Restauration</h3>
-            </div>
-	   <div class="engagement-item">
-                <div class="engagement-content">
-		   	<p>For the past two years, every summer I have been helping with the restoration of the Blossac manor house, located in Brittany in western France, which suffered severe flooding during the winter of 2025.</p>
-			<p>This allows me to discover Brittany's heritage and art in general, with an added altruistic dimension.</p>
-		</div>
-		<img src="img/blossac.jpg" alt="photo de Blossac" class="sport-float-image left-float">
-	    </div>
-	    <div class="video-container small-video"> 
-                <iframe 
-                    width="560" 
-                    height="315" 
-                    src="https://www.youtube.com/embed/y_aeKXz_GjI" 
-                    frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen>
-                </iframe>
-            </div>
+  <section class="hero" aria-label="Introduction">
+    <div class="hero-main">
+      <div class="hero-text">
+        <h1>Antoine Chaptal</h1>
+        <p class="lead">Élève ingénieur en réseaux et télécommunications à l'ENSEEIHT, Toulouse INP. J'aime les projets que l'on mène de bout en bout : concevoir, coder, tester, documenter, et le faire en équipe.</p>
+      </div>
+      <figure class="portrait">
+        <img src="img/portrait.jpg" alt="Portrait d'Antoine Chaptal" width="800" height="800">
+      </figure>
+    </div>
 
-        </section>
-        <section id="career-development">
-            <h2>Career Development</h2>
-            <div class="tabs-nav">
-                <a href="#other-career" class="tab-link active">Career</a> 
-                <a href="#pep" class="tab-link">PEP (Personal and Professional Project)</a>
-                <a href="#internships" class="tab-link">Internships</a> 
-            </div>
-    <div id="other-career" class="tab-content active">
-                <h3>Curriculum Vitae</h3>            
-                <p>My professional documents are available below in PDF format. These documents provide a detailed summary of my academic background, technical skills and professional experience.</p>
-                <div class="cv-links-list">
-                    <h4>Download my CV</h4>
-                    <ul>
-                        <li>
-                            <a href="pdfs/CV_Antoine_Chaptal_FR.pdf" target="_blank" class="download-link">
-                                CV Français (PDF)
-                            </a>
-                        </li>
-                        <li>
-                            <a href="pdfs/CV_Antoine_Chaptal_EN.pdf" target="_blank" class="download-link">
-                                English CV (PDF)
-                            </a>
-                        </li>
-                    </ul>
-                </div>                            
-            </div>
-    <div id="internships" class="tab-content"><h3>Internships</h3><p>Content coming soon.</p></div>
-            <div id="pep" class="tab-content"><h3>Personal and Professional Project (PEP)</h3><p>Content coming soon.</p></div>                      
-        </section>
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>You can contact me directly via the links below.</p>
-            <p>
-                Email : <a href="mailto:antoine.chaptaldechanteloup@etu.inp-n7.fr">antoine.chaptaldechanteloup@etu.inp-n7.fr</a><br>
-                LinkedIn : <a href="https://linkedin.com/in/antoine-chaptal-8b1a2a37b" target="_blank">Mon Profil LinkedIn</a><br>
-                GitHub : <a href="https://github.com/bobbyfjgh/bobbyfjgh.github.io" target="_blank">Mon Profil GitHub</a>
-            </p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2025 Antoine Chaptal - all rights reserved</p>
-    </footer>
-    <script src="js/main.js"></script> 
+    <dl class="facts">
+      <div><dt class="label">École</dt><dd>ENSEEIHT, Toulouse INP</dd></div>
+      <div><dt class="label">Parcours</dt><dd>Télécommunications, 2ᵉ année</dd></div>
+      <div><dt class="label">Recherche</dt><dd>Stage technique de 3 mois en réseaux, à partir de juin 2027</dd></div>
+      <div><dt class="label">Documents</dt><dd class="links"><a href="pdfs/CV_Antoine_Chaptal_FR.pdf">CV (FR)</a><a href="pdfs/CV_Antoine_Chaptal_EN.pdf">CV (EN)</a><a href="https://linkedin.com/in/antoine-chaptal">LinkedIn</a></dd></div>
+    </dl>
+  </section>
+
+  <section id="presentation" class="section" aria-labelledby="h-presentation">
+    <div class="section-head">
+      <div class="section-num">01</div>
+      <h2 id="h-presentation">Présentation</h2>
+    </div>
+    <div class="section-body">
+      <p>Après une enfance à Bruxelles et trois années de classes préparatoires au Mans et à Tours, je suis entré à l'ENSEEIHT en 2025, en parcours télécommunications. Mon travail technique porte surtout sur les réseaux : adressage, routage, services.</p>
+      <p>En dehors de l'école, je dirige une troupe scout et je suis réserviste au 1er Régiment de Chasseurs Parachutistes.</p>
+      <a class="pitch" href="https://www.youtube.com/watch?v=CleSc_Oj3v0">
+        <span class="play" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24"><path d="M8 5v14l11-7z" fill="#1E2D4F"/></svg></span>
+        <span class="txt"><strong>Elevator pitch</strong><span>Deux minutes, en anglais : parcours, projets, engagements, projets de mobilité</span></span>
+      </a>
+    </div>
+  </section>
+
+  <section id="formation" class="section" aria-labelledby="h-formation">
+    <div class="section-head">
+      <div class="section-num">02</div>
+      <h2 id="h-formation">Formation et projets</h2>
+    </div>
+    <div class="section-body">
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Période</th><th>Formation</th></tr></thead>
+          <tbody>
+            <tr><td class="when">2025 – 2028</td><td><strong>Toulouse INP – ENSEEIHT</strong>, diplôme d'ingénieur Sciences du Numérique, parcours télécommunications. Réseaux et protocoles (TCP/IP), systèmes Unix, routage, traitement du signal, programmation objet. Option Managership : gestion de projet agile (Scrum), leadership.</td></tr>
+            <tr><td class="when">2022 – 2025</td><td><strong>CPGE PCSI / PSI*</strong>, Le Mans et Tours. Mathématiques, physique, sciences de l'ingénieur, algorithmique (Python, SQL).</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Projet principal : routeur IP avec cache, en Ada</h3>
+      <p class="meta">Janvier 2026 · groupe de 3 · Ada, routage IP, cache FIFO / LRU / LFU, tests</p>
+      <p>Attribuer la bonne route à chaque paquet à partir d'une table de routage, puis ajouter un cache de routes, en arbre ou en liste chaînée, avec trois politiques de remplacement : FIFO, LRU et LFU.</p>
+      <p><strong>Mon rôle.</strong> Extraction de la table de routage et des paquets, scénario avec cache en liste chaînée, module des types, participation au rapport.</p>
+      <p><strong>Ce que j'en retiens.</strong> La rigueur du typage et de la généricité en Ada, et le travail d'équipe : répartir les tâches, assembler des modules écrits par d'autres.</p>
+
+      <h3>Autres projets</h3>
+      <div class="table-wrap">
+        <table>
+          <tbody>
+            <tr><td class="when">Mai 2026</td><td><strong>ArchiDu7, simulateur de circuits logiques</strong> — équipe de 9 en Scrum. Application JavaFX qui lit des scripts SHDL et simule le circuit. J'ai réalisé l'éditeur de texte, l'ossature des menus et la barre d'outils.</td></tr>
+            <tr><td class="when">2026</td><td><strong>Infrastructure réseau pour un FAI</strong> — adressage VLSM/CIDR, routage RIP/OSPF, passerelles NAT, serveurs Web et DNS, analyse des flux sous Wireshark.</td></tr>
+            <tr><td class="when">2026</td><td><strong>Mini-shell Unix en C</strong> — processus (fork, exec), tubes, redirections, contrôle mémoire avec Valgrind.</td></tr>
+            <tr><td class="when">Janvier 2026</td><td><strong>Plus court chemin sur une grille</strong> — en binôme, en C : chemin de moindre coût sur une grille d'altitudes, code en modules, tests unitaires.</td></tr>
+            <tr><td class="when">2024 – 2025</td><td><strong>TIPE : la tuyère Kort, encore adaptée ?</strong> — théorie, banc d'essai avec tube de Pitot, simulation CFD confrontée aux mesures : la vitesse de sortie est plus élevée avec la tuyère.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">Compétitions et associations : Thales BattleDev (octobre 2025), CTF de l'ENSEEIHT, association informatique, association cybersécurité.</p>
+    </div>
+  </section>
+
+  <section id="mobilite" class="section" aria-labelledby="h-mobilite">
+    <div class="section-head">
+      <div class="section-num">03</div>
+      <h2 id="h-mobilite">Mobilité internationale</h2>
+    </div>
+    <div class="section-body">
+      <ul>
+        <li><strong>Bruxelles</strong> : une enfance dans un environnement européen et multiculturel.</li>
+        <li><strong>Allemagne, Autriche, Italie</strong> : plusieurs séjours.</li>
+        <li><strong>Camino del Norte</strong> : deux sections du chemin de Saint-Jacques, à pied, au cours des deux dernières années.</li>
+      </ul>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Langue</th><th>Niveau</th></tr></thead>
+          <tbody>
+            <tr><td class="when">Français</td><td>Langue maternelle</td></tr>
+            <tr><td class="when">Anglais</td><td>B2, courant</td></tr>
+            <tr><td class="when">Espagnol</td><td>Notions</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">Mobilité de 17 semaines (S9) en préparation : voir les projets de mobilité en section 06.</p>
+    </div>
+  </section>
+
+  <section id="engagement" class="section" aria-labelledby="h-engagement">
+    <div class="section-head">
+      <div class="section-num">04</div>
+      <h2 id="h-engagement">Développement durable et engagement citoyen</h2>
+    </div>
+    <div class="section-body">
+      <div class="table-wrap">
+        <table>
+          <tbody>
+            <tr><td class="when">Depuis 2025</td><td><strong>Réserviste au 1er RCP</strong> — Préparation Militaire Supérieure en 2021-2022, formation militaire initiale en juillet 2026 : aguerrissement, discipline, rusticité, cohésion d'équipe.</td></tr>
+            <tr><td class="when">Depuis 2025</td><td><strong>Chef de troupe scout</strong> — je dirige une troupe d'une douzaine de jeunes de 12 à 17 ans, et j'organise la logistique, l'intendance et le budget des sorties et des camps.</td></tr>
+            <tr><td class="when">Étés 2024 et 2025</td><td><strong>Restauration du manoir de Blossac</strong> — travaux bénévoles sur un manoir breton fortement touché par les inondations.</td></tr>
+            <tr><td class="when">À l'ENSEEIHT</td><td><strong>Fresque du Climat</strong>, et un rôle dans la pièce « King Kong », un projet de lutte contre les violences sexistes et sexuelles dans la communauté étudiante.</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="photos">
+        <figure>
+          <img src="img/blossac.jpg" alt="Travaux de terrassement au manoir de Blossac" loading="lazy" width="1536" height="2040">
+          <figcaption>Chantier au manoir de Blossac</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="sport" class="section" aria-labelledby="h-sport">
+    <div class="section-head">
+      <div class="section-num">05</div>
+      <h2 id="h-sport">Sport et activités</h2>
+    </div>
+    <div class="section-body">
+      <div class="table-wrap">
+        <table>
+          <tbody>
+            <tr><td class="when">Sport</td><td>Course à pied, cyclisme sur route, canoë-kayak</td></tr>
+            <tr><td class="when">Musique</td><td>Trompette, harmonica</td></tr>
+            <tr><td class="when">Autres</td><td>Jardinage, pâtisserie</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="photos">
+        <figure>
+          <img src="img/course.jpg" alt="Antoine en tenue de course, au bord de l'océan" loading="lazy" width="856" height="1600">
+          <figcaption>Course à pied</figcaption>
+        </figure>
+        <figure>
+          <img src="img/canoe.jpg" alt="Antoine en gilet de sauvetage, sur l'eau" loading="lazy" width="554" height="445">
+          <figcaption>Canoë-kayak</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="carriere" class="section" aria-labelledby="h-carriere">
+    <div class="section-head">
+      <div class="section-num">06</div>
+      <h2 id="h-carriere">Projet professionnel</h2>
+    </div>
+    <div class="section-body">
+      <p>Je recherche un stage technique de 3 mois à partir de juin 2027, en réseaux et systèmes. Mes projets, du routeur en Ada à l'infrastructure de FAI, m'ont orienté vers ce domaine.</p>
+      <p class="note">CV en <a href="pdfs/CV_Antoine_Chaptal_FR.pdf">français</a> et en <a href="pdfs/CV_Antoine_Chaptal_EN.pdf">anglais</a>, profil <a href="https://linkedin.com/in/antoine-chaptal">LinkedIn</a>, elevator pitch en section 01.</p>
+
+      <h3>Trois role models</h3>
+      <p>En cours : je prépare des échanges avec des anciens de l'ENSEEIHT. Chaque profil sera présenté ici : parcours, missions, compétences clés, conseil reçu, et ce que j'en retiens.</p>
+
+      <h3>Trois projets de mobilité</h3>
+      <div class="table-wrap">
+        <table>
+          <tbody>
+            <tr><td class="when">Projet 1</td><td><strong>Échange académique en Irlande</strong></td></tr>
+            <tr><td class="when">Projet 2</td><td><strong>Stage dans un pays nordique</strong>, Suède ou Finlande</td></tr>
+            <tr><td class="when">Projet 3</td><td class="dim">À définir, en lien avec les role models</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Expériences professionnelles</h3>
+      <div class="table-wrap">
+        <table>
+          <tbody>
+            <tr><td class="when">2026</td><td>Travail saisonnier dans les vignes</td></tr>
+            <tr><td class="when">Étés 2021 à 2023</td><td>Paysagiste : entretien d'espaces verts chez des particuliers</td></tr>
+            <tr><td class="when">Juillet 2020</td><td>Ouvrier agricole, travail saisonnier</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Validations du diplôme</h3>
+      <div class="table-wrap">
+        <table>
+          <thead><tr><th>Exigence</th><th>État</th></tr></thead>
+          <tbody>
+            <tr><td>Anglais B2+ (S9)</td><td>Niveau actuel : B2</td></tr>
+            <tr><td>Mobilité de 17 semaines (S9)</td><td>En préparation</td></tr>
+            <tr><td>Engagement citoyen, 40 h (S9)</td><td>Scoutisme, réserve, Blossac</td></tr>
+            <tr><td>Stages (S6 et S8)</td><td>Stage de 3 mois recherché pour juin 2027</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <a href="mailto:antoine.chaptaldechanteloup@etu.inp-n7.fr">antoine.chaptaldechanteloup@etu.inp-n7.fr</a>
+    <span>Mis à jour en octobre 2026</span>
+  </div>
+</footer>
+
 </body>
 </html>
